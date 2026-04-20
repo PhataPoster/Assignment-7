@@ -2,7 +2,6 @@
 const nextConfig = {
   devIndicators: false,
   images: {
-    domains: ['i.ibb.co.com'],
     remotePatterns: [
       {
         protocol: 'https',

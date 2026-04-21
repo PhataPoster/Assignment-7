@@ -9,6 +9,9 @@ import {
     RiNotificationSnoozeLine,
     RiVideoLine,
 } from "react-icons/ri";
+import CallBtn from "@/components/apps/CallBtn";
+import TextBtn from "@/components/apps/TextBtn";
+import VideoCallBtn from "@/components/apps/VideoCallBtn";
 
 const FriendsDetailsPage = async ({ params }) => {
     const { id } = await params;
@@ -79,18 +82,9 @@ const FriendsDetailsPage = async ({ params }) => {
                     Quick Check-In
                 </p>
                 <div className="mt-3 grid grid-cols-3 gap-2 h-full">
-                    <button className="btn flex flex-col py-3 h-full">
-                        <div className="text-2xl"> <TbPhoneCall /></div>
-                        <p className="text-gray-500">Call</p>
-                    </button>
-                    <button className="btn flex flex-col py-3 h-full">
-                        <div className="text-2xl"> < RiMessage2Line /></div>
-                        <p className="text-gray-500">Text</p>
-                    </button>
-                    <button className="btn flex flex-col py-3 h-full ">
-                       <div className="text-2xl"> < RiVideoLine /></div>
-                        <p className="text-gray-500">Video</p>
-                    </button>
+                    <CallBtn friend={friend} />
+                    <TextBtn friend={friend} />
+                    <VideoCallBtn friend={friend} />
                 </div>
             </div>
             <button className="flex btn justify-center items-center gap-1 border border-gray-200 bg-white px-4 py-2 text-gray-700 shadow-sm lg:col-span-2 lg:row-span-1 h-full">

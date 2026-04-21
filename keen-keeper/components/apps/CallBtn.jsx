@@ -2,6 +2,7 @@
 import { TimeLineFriendsContext } from '@/context/timeline.context';
 import { useContext, useState } from 'react';
 import { TbPhoneCall } from 'react-icons/tb';
+import { toast } from 'react-toastify';
 
 const CallBtn = ({friend}) => {
 
@@ -16,7 +17,7 @@ const CallBtn = ({friend}) => {
     }
     const handleCallBtn = () => {
         setCalling(true);
-        alert("Calling...");
+        toast.success(`Calling to ${friend.name}...`);
         setTimelineFriends([...timelineFriends, callFriend]);
         // console.log(timelineFriends);
     };

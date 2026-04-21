@@ -2,6 +2,7 @@
 import { RiVideoLine } from "react-icons/ri";
 import { TimeLineFriendsContext } from '@/context/timeline.context';
 import { useContext, useState } from 'react';
+import { toast } from "react-toastify";
 
 const VideoCallBtn = ({friend}) => {
     const {timelineFriends, setTimelineFriends, setVideoCalling} = useContext(TimeLineFriendsContext);
@@ -14,7 +15,7 @@ const VideoCallBtn = ({friend}) => {
 
     const handleVideoCallBtn = () => {
         setVideoCalling(true);
-        alert("Video calling...");
+        toast.success(`Video calling ${friend.name}...`);
         setTimelineFriends([...timelineFriends, videoCallFriend]);
     };
 

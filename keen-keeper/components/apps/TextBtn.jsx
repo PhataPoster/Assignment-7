@@ -2,6 +2,7 @@
 import { RiMessage2Line } from "react-icons/ri";
 import { TimeLineFriendsContext } from '@/context/timeline.context';
 import { useContext, useState } from 'react';
+import { toast } from "react-toastify";
 
 
 const TextBtn = ({friend}) => {
@@ -16,7 +17,7 @@ const TextBtn = ({friend}) => {
    
     const handleTextBtn = () => {
         setTexting(true);
-        alert("Texting...");
+       toast.success(`Texting to ${friend.name}...`);
         setTimelineFriends([...timelineFriends, textFriend]);
     };
 

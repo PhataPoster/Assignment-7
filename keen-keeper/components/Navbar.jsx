@@ -17,7 +17,7 @@ const Navbar = () => {
         }`;
 
     return (
-        <div className="navbar bg-base-100 border-b border-gray-200 px-20">
+        <div className="navbar bg-base-100 border-b border-gray-200 lg:px-20 px-2">
             <div className="flex-1">
                 <Link href="/" className="text-xl font-bold text-[#1f2937]">
                     <span className="font-extrabold">Keen</span>Keeper
